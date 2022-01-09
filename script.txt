@@ -1,7 +1,7 @@
-cockroach sql -e "SELECT * from statbotics2.years;" --format=csv > years.csv --insecure
-cockroach sql -e "SELECT * from statbotics2.teams;" --format=csv > teams.csv --insecure
-cockroach sql -e "SELECT * from statbotics2.team_years;" --format=csv > team_years.csv --insecure
-cockroach sql -e "SELECT * from statbotics2.events;" --format=csv > events.csv --insecure
-cockroach sql -e "SELECT * from statbotics2.team_events;" --format=csv > team_events.csv --insecure
-cockroach sql -e "SELECT * from statbotics2.matches;" --format=csv > matches.csv --insecure
-cockroach sql -e "SELECT d,team,team_year_id,team_event_id,year,event_id,match_id,time,playoff,alliance,event,match,elo,opr,ils_1,ils_2 from statbotics2.team_matches;" --format=csv > team_matches.csv --insecure
+cockroach sql -e "SELECT * from statbotics.years;" --format=csv > years.csv --insecure
+cockroach sql -e "SELECT * from statbotics.teams;" --format=csv > teams.csv --insecure
+cockroach sql -e "SELECT * from statbotics.team_years;" --format=csv > team_years.csv --insecure
+cockroach sql -e "SELECT * from statbotics.events;" --format=csv > events.csv --insecure
+cockroach sql -e "SELECT * from statbotics.team_events;" --format=csv > team_events.csv --insecure
+cockroach sql -e "SELECT * from statbotics.matches;" --format=csv > matches.csv --insecure
+cockroach sql -e "SELECT team,year,event,match,time,playoff,alliance,elo,opr,ils_1,ils_2 from statbotics2.team_matches;" --format=csv > team_matches.csv --insecure
