@@ -1,0 +1,7 @@
+cockroach sql -e "SELECT * from statbotics3.years;" --format=csv > years.csv --insecure
+cockroach sql -e "SELECT * from statbotics3.teams;" --format=csv > teams.csv --insecure
+cockroach sql -e "SELECT * from statbotics3.team_years;" --format=csv > team_years.csv --insecure
+cockroach sql -e "SELECT * from statbotics3.events;" --format=csv > events.csv --insecure
+cockroach sql -e "SELECT * from statbotics3.team_events;" --format=csv > team_events.csv --insecure
+cockroach sql -e "SELECT * from statbotics3.matches;" --format=csv > matches.csv --insecure
+cockroach sql -e "SELECT team,year,event,match,time,elim,alliance,epa,auto_epa,teleop_epa,endgame_epa,rp_1_epa,rp_2_epa from statbotics3.team_matches;" --format=csv > team_matches.csv --insecure
